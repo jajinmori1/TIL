@@ -1,3 +1,3 @@
-# TIL
-Today I learned
-오늘 배운 것들을 정리하는 곳
+# Clean_Code 책 리뷰
+클린 코드 책 간단 리뷰
+배운 것들 간단히 정리
