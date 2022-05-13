@@ -172,3 +172,42 @@ def function_2(x):
 init_x = np.array([-3.0, 4.0])
 gradient_descent(function_2, init_x=init_x, lr=0.1, step_num=100)
 # %%
+# 학습률이 너무 큰 예 : lr = 10.0
+init_x = np.array([-3.0, 4.0])
+gradient_descent(function_2, init_x=init_x, lr=10.0, step_num=100)
+# %%
+# 학습률이 너무 작은 예 : lr=1e-10
+init_x = np.array([-3.0, 4.0])
+gradient_descent(function_2, init_x=init_x, lr=1e-10, step_num=100)
+# %%
+import numpy as np
+#from common.functions import softmax, cross_entropy_error
+#from common.gradient import numerical_gradient
+
+class simpleNet:
+  def __init__(self):
+    self.w = np.random.randn(2,3) # 정규분포로 초기화
+
+  def predict(self, x):
+    return np.dot(x, self.w)
+
+  def loss(self, x, t):
+    z = self.predict(x)
+    y = softmax(z)
+    loss = cross_entropy_error(y, t)
+
+    return loss
+
+
+net = simpleNet()
+print(net.w)
+
+x = np.array([0.6, 0.9])
+p = net.predict(x)
+print(p)
+
+np.argmax(p)
+
+t = np.array([0,0,1])
+net.loss(x,t)
+# %%
