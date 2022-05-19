@@ -170,7 +170,7 @@ dB
 
 
 class Affine:
-    def __init_(self, W, b):
+    def __init__(self, W, b):
         self.W = W
         self.b = b
         self.x = None
@@ -210,4 +210,6 @@ class SoftWithLoss:
         dx = (self.y - self.t) / batch_size
 
         return dx
+# %%
+
 # %%
