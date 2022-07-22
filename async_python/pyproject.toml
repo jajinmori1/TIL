@@ -11,6 +11,8 @@ black = "^22.6.0"
 flake8 = "^4.0.1"
 requests = "^2.28.1"
 aiohttp = "^3.8.1"
+beautifulsoup4 = "^4.11.1"
+bs4 = "^0.0.1"
 
 [tool.poetry.dev-dependencies]
 pytest = "^5.2"
