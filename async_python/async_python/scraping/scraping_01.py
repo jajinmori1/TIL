@@ -1,5 +1,3 @@
-from re import L
-from bs4 import BeautifulSoup
 import aiohttp
 import asyncio
 
@@ -11,7 +9,8 @@ async def fetch(session, url):
 
 
 async def main():
-    BASE_URL = "https://bjpublic.tistory.com/category/%EC%A0%84%EC%B2%B4%20%EC%B6%9C%EA%B0%84%20%EB%8F%84%EC%84%9C"
+    BASE_URL = "https://bjpublic.tistory.com/category/ \
+      %EC%A0%84%EC%B2%B4%20%EC%B6%9C%EA%B0%84%20%EB%8F%84%EC%84%9C"
 
     urls = [f"{BASE_URL}?page={i}" for i in range(1, 10)]
     async with aiohttp.ClientSession() as session:
