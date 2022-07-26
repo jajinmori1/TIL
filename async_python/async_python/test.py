@@ -6,3 +6,5 @@ def main():
 
 
 print("hello world!")
+numbers = [1, 2, 3]
+print(sum(*numbers))
